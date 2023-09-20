@@ -5,15 +5,11 @@
 --changeset you:create-book-table
 CREATE TABLE author
 (
-    uuid       UUID PRIMARY KEY,
-    first_name VARCHAR(255) NOT NULL,
-    initials   VARCHAR(10),
-    last_name  VARCHAR(255) NOT NULL
-);
---changeset you:create-genre-table
-CREATE TABLE genre
-(
-    name VARCHAR(50) PRIMARY KEY
+    uuid          UUID PRIMARY KEY NOT NULL,
+    first_name    VARCHAR(255)     NOT NULL,
+    initials      VARCHAR(10),
+    last_name     VARCHAR(255)     NOT NULL,
+    date_of_birth DATE             NOT NULL
 );
 
 --changeset you:create-book-details-table
@@ -27,15 +23,38 @@ CREATE TABLE book_details
 --changeset you:create-book-table
 CREATE TABLE book
 (
-    isbn             VARCHAR(50) PRIMARY KEY,
-    title            VARCHAR(255) NOT NULL,
-    main_author_uuid UUID,
-    category_name    VARCHAR(50),
-    details_id       BIGINT,
+    isbn        VARCHAR(50) PRIMARY KEY NOT NULL,
+    title       VARCHAR(255)            NOT NULL,
+    author_uuid UUID,
+    genre       VARCHAR(50),
+    description TEXT,
+    rating      INT,
+    details_id  BIGINT,
     --todo voorbeeld van one to many
-    FOREIGN KEY (main_author_uuid) REFERENCES author (uuid),
-    --todo voorbeeld van one to many, of embeddable
-    FOREIGN KEY (category_name) REFERENCES genre (name),
-    -- todo voorbeeld van one to one -> beter voorbeeld bedenken
+    FOREIGN KEY (author_uuid) REFERENCES author (uuid),
+    -- todo voorbeeld van one to one /element collection -> beter voorbeeld bedenken
     FOREIGN KEY (details_id) REFERENCES book_details (id)
 );
+
+--changeset you:create-inventory-table
+CREATE TABLE inventory
+(
+    barcode       VARCHAR(50) PRIMARY KEY NOT NULL,
+    quantity      INT,
+    price_in_euro DOUBLE PRECISION,
+    book_isbn     VARCHAR(20),
+    FOREIGN KEY (book_isbn) REFERENCES BOOK (isbn)
+);
+
+-- todo bespreken join table / andere opties
+CREATE TABLE book_coauthors
+(
+    book_isbn   VARCHAR(20),
+    author_uuid UUID,
+    FOREIGN KEY (book_isbn) REFERENCES BOOK (isbn),
+    FOREIGN KEY (author_uuid) REFERENCES AUTHOR (uuid)
+);
+
+
+
+
