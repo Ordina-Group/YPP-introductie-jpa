@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5
+      author: you
+      changes:
+        - loadData:
+            file: data/author.csv
+            tableName: author
+            separator: ","
+  - changeSet:
+      id: 6
+      author: you
+      changes:
+        - loadData:
+            file: data/book.csv
+            tableName: book
+            separator: ","
+  - changeSet:
+      id: 7
+      author: you
+      changes:
+        - loadData:
+            file: data/inventoryobject.csv
+            tableName: inventory
+            separator: ","
+  - changeSet:
+      id: 8
+      author: you
+      changes:
+        - loadData:
+            file: data/book_coauthors.csv
+            tableName: book_coauthors
+            separator: ","

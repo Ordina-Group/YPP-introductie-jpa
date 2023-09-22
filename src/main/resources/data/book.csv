@@ -1,0 +1,3 @@
+isbn,title,author_uuid,genre,description,rating
+978-3-16-148410-0,Book One,123e4567-e89b-12d3-a456-426614174000,ACTION,An action-packed book.,4
+978-3-17-148410-1,Book Two,223e4567-e89b-12d3-a456-426614174001,ADVENTURE,An adventurous book.,5

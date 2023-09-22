@@ -1,29 +1,30 @@
 Presentatie:
 - Herhalen vorige les (@Stereotypes & Dependency Injection). Ze moeten het ons vertellen.
-- Wat doet een database? Raakvlak met de vorige les?
-- Profielen (DEV & PROD) -> configuratie als datastore
-- Database object storage: Je komt best lang weg met een json key value
-- Database SQL: Gestructureerde data. Zoeken, transactions, schema
+  (Stijn)
+- Wat doet een database? Raakvlak met de vorige les? (Stefan)
+  - Profielen (DEV & PROD) -> configuratie als datastore
+  - Database object storage: Je komt best lang weg met een json key value
+  - Database SQL: Gestructureerde data. Zoeken, transactions, schema
 - Microservice architectuur: 12factor. (Elke microservice heeft eigen database)
-- Aan de slag: docker-compose draaien en in PGAdmin komen
-- *Podman installeren en waarom*
-- Simpele tabel inrichten: UUID, String, comporable. Paar entities
+  (Stijn)
+- Aan de slag: postgres (Stijn)
+  - docker-compose draaien en in PGAdmin komen
+  - Simpele tabel inrichten: UUID, String, comparable. Paar entities
 
 Presentatie 2:
-- JPA wat is het
-- Spring boot JPA dependency 
-- JPARepository
-- ORM (DAO, Entity manager)
-- Entity (waarschijnlijke annotaties)
-- Aan de slag: applicatie test opzet (default profiel h2)
 
-Pair programming sessie:
-- Koppelen met Postgress
+- JPA wat is het (Stefan)
+  - Spring boot JPA dependency
+  - JPARepository
+  - ORM (DAO, Entity manager)
+  - Entity (waarschijnlijke annotaties)
+- Aan de slag: (Stijn)
+  - applicatie test opzet
+  - Koppelen met Postgress
 
 Bonus:
-- Liquibase migrate
 - Presentatie liquibase door ons
-
+- Liquibase migrate, veranderen tabel naam
 
 
 
