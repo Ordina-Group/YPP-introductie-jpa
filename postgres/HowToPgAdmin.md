@@ -17,6 +17,7 @@
 - Create a table using sql
 - Insert data in the table
 - Query the data from the table
+- **See [src/main/resources/data](../src/main/resources/data) for example data**
 
 ## Using IntelliJ Ultimate
 
