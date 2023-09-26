@@ -13,7 +13,7 @@ import java.util.UUID;
 public class Author implements AuthorInterface {
 
     @Id
-    private UUID id;
+    private UUID uuid;
 
     private String firstName;
     private String lastName;
@@ -24,7 +24,7 @@ public class Author implements AuthorInterface {
     private List<Book> books;
 
     @OneToOne
-    private InventoryItem inventoryItem;
+    private Inventory inventoryItem;
 
     @Override
     public List<Book> getBooks(){

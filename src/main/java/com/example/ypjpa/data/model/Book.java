@@ -19,7 +19,7 @@ public class Book implements BookInterface {
     private Author author;
 
     @OneToOne
-    private InventoryItem inventoryItem;
+    private Inventory inventoryItem;
 
     @Override
     public String toString() {
