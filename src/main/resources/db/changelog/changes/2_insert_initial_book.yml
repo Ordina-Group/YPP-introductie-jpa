@@ -20,7 +20,7 @@ databaseChangeLog:
       author: you
       changes:
         - loadData:
-            file: data/inventoryobject.csv
+            file: data/inventory.csv
             tableName: inventory
             separator: ","
   - changeSet:
@@ -28,6 +28,6 @@ databaseChangeLog:
       author: you
       changes:
         - loadData:
-            file: data/book_coauthors.csv
-            tableName: book_coauthors
+            file: data/book_authors.csv
+            tableName: book_authors
             separator: ","

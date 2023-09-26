@@ -44,7 +44,7 @@ CREATE TABLE inventory
     FOREIGN KEY (book_isbn) REFERENCES BOOK (isbn)
 );
 
-CREATE TABLE book_coauthors
+CREATE TABLE book_authors
 (
     book_isbn   VARCHAR(20),
     author_uuid UUID,
