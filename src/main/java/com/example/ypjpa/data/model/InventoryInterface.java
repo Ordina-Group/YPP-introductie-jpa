@@ -1,6 +1,6 @@
 package com.example.ypjpa.data.model;
 
-public interface InventoryItemInterface {
+public interface InventoryInterface {
 
 
     default Book getBook() {

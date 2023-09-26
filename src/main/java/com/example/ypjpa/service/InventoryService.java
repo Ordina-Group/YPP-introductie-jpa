@@ -2,7 +2,7 @@ package com.example.ypjpa.service;
 
 import com.example.ypjpa.data.InventoryRepository;
 import com.example.ypjpa.data.model.Book;
-import com.example.ypjpa.data.model.InventoryItem;
+import com.example.ypjpa.data.model.Inventory;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ public class InventoryService {
         this.repository = repository;
     }
 
-    public void addObject(InventoryItem inventoryObject) {
+    public void addObject(Inventory inventoryObject) {
         repository.save(inventoryObject);
     }
 
