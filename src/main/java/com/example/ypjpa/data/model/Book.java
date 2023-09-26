@@ -18,9 +18,6 @@ public class Book implements BookInterface {
     @ManyToOne
     private Author author;
 
-    @OneToOne
-    private Inventory inventoryItem;
-
     @Override
     public String toString() {
         return "title: " + title;

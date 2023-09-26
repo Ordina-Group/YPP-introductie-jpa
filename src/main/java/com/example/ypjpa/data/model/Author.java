@@ -23,9 +23,6 @@ public class Author implements AuthorInterface {
     @OneToMany
     private List<Book> books;
 
-    @OneToOne
-    private Inventory inventoryItem;
-
     @Override
     public List<Book> getBooks(){
         return books;
