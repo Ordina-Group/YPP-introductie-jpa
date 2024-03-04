@@ -1,5 +1,6 @@
-package com.example.ypjpa.data;
+package com.example.ypjpa.testutil;
 
+import com.example.ypjpa.data.InventoryRepository;
 import com.example.ypjpa.data.model.InventoryItem;
 import org.apache.commons.lang3.NotImplementedException;
 import org.springframework.stereotype.Component;

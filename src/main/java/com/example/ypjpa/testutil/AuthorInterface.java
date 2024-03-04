@@ -1,4 +1,6 @@
-package com.example.ypjpa.data.model;
+package com.example.ypjpa.testutil;
+
+import com.example.ypjpa.data.model.Book;
 
 import java.util.List;
 
