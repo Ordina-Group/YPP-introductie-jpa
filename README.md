@@ -26,3 +26,13 @@ Bonus:
 - Uitbreiden test
 - Efficientere queries
 - Andere verbeter punten?
+
+Feedback:
+
+- Toegang tot GIT, docker
+- Code chaotisch, veel afleiding in de code
+- Rode draad
+  - SQL staat los van db is wel basis, maar liquibase helpt
+  - Shotcut en hergroepering momenten.
+    - Mensen die voorlopen kunnen hun collega's helpen
+  - Nagesprek: wat heb je geleerd, review code
