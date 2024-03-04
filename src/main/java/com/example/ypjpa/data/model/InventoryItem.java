@@ -1,9 +1,6 @@
 package com.example.ypjpa.data.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,19 +10,17 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@Table(name = "inventory")
 public class InventoryItem implements InventoryItemInterface {
 
     @Id
+    @Column(name = "barcode")
     private String barcode;
 
     private Long quantity;
-    private Double price_in_Euro;
+    private Double priceInEuro;
 
-    private String description;
-
-    private Long book_Isbn;
-
-    @OneToOne(mappedBy = "InventoryItem")
+    @OneToOne
     Book book;
 
     @Override

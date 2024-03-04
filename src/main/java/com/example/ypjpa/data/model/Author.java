@@ -6,6 +6,7 @@ import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
 import java.util.UUID;
 
 @Entity
@@ -15,10 +16,12 @@ public class Author implements AuthorInterface {
 
     @Id
     private UUID uuid;
-    private String first_Name;
+    private String firstName;
 
     private String initials;
-    private String last_Name;
+    private String lastName;
+
+    private Date dateOfBirth;
 
     @OneToOne
     private Book book;
